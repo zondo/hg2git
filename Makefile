@@ -1,8 +1,7 @@
 # Makefile for hg repo conversion.
 
 PYTHON = python3
-
-TOOL = hg-export-tool
+TOOL   = exporter
 
 EXPORT  = $(TOOL)/exporter.py
 AUTHORS = $(TOOL)/list-authors.py
@@ -11,8 +10,8 @@ REPOFILE = REPO.txt
 JSONFILE = REPO.json
 AUTHFILE = authors.txt
 
-HGDIR  = hg
-GITDIR = git
+HGDIR  = repo-hg
+GITDIR = repo-git
 
 all: update
 
@@ -26,7 +25,7 @@ update:
 		hg -R $$hgrepo pull -u;					\
 	    else      		      	   				\
 		echo cloning $$url into $$name;				\
-		cd $(HGDIR) && hg clone $$url $$name;			\
+		(cd $(HGDIR) && hg clone $$url $$name);			\
 	    fi;								\
 	    echo "    \"$$hgrepo\": \"$$gitrepo\"" >> $(JSONFILE);	\
 	done
