@@ -1,1 +1,2 @@
-zonita  https://hg.sr.ht/~zondo/zonita
+pyxword   https://hg.sr.ht/~zondo/pyxword
+zonita    https://hg.sr.ht/~zondo/zonita
