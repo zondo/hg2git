@@ -13,6 +13,8 @@ AUTHFILE = authors.txt
 HGDIR  = repo-hg
 GITDIR = repo-git
 
+OPTS = --plugin-path plugins --plugin fix_comments
+
 all: update
 
 update:
@@ -32,9 +34,10 @@ update:
 	@ echo "}" >> $(JSONFILE)
 
 export: $(AUTHFILE)
-	$(PYTHON) $(EXPORT) $(JSONFILE) -A $(AUTHFILE) --hg-hash
+	$(PYTHON) $(EXPORT) $(JSONFILE) $(OPTS) -A $(AUTHFILE) --hg-hash
 
 authors:
+	@ rm -f authors.map
 	$(PYTHON) $(AUTHORS) $(JSONFILE)
 
 clean:; rm -f authors.map $(JSONFILE)
