@@ -29,9 +29,11 @@ update:
 		echo cloning $$url into $$name;				\
 		(cd $(HGDIR) && hg clone $$url $$name);			\
 	    fi;								\
-	    echo "    \"$$hgrepo\": \"$$gitrepo\"" >> $(JSONFILE);	\
+	    if ! test -z "$$line"; then echo "," >> $(JSONFILE); fi;	\
+	    line="\"$$hgrepo\": \"$$gitrepo\"";				\
+	    echo -n "  $$line" >> $(JSONFILE);				\
 	done
-	@ echo "}" >> $(JSONFILE)
+	@ echo "\n}" >> $(JSONFILE)
 
 export: $(AUTHFILE)
 	$(PYTHON) $(EXPORT) $(JSONFILE) $(OPTS) -A $(AUTHFILE) --hg-hash
