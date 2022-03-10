@@ -1,5 +1,2 @@
 makexlsx    https://hg.sr.ht/~zondo/makexlsx
-pypubquiz   https://hg.sr.ht/~zondo/pypubquiz
 pyxword     https://hg.sr.ht/~zondo/pyxword
-quizzes     https://hg.sr.ht/~zondo/quizzes
-
