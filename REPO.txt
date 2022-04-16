@@ -1,2 +1,1 @@
-makexlsx    https://hg.sr.ht/~zondo/makexlsx
 pyxword     https://hg.sr.ht/~zondo/pyxword
