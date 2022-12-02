@@ -1,1 +1,2 @@
 pyxword     https://hg.sr.ht/~zondo/pyxword
+pyifm       https://hg.sr.ht/~zondo/pyifm
