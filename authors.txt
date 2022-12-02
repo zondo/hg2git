@@ -1,3 +1,5 @@
 "Glenn Hutchings"="Glenn Hutchings <zondo42@gmail.com>"
 "Glenn Hutchings <zondo42@gmail.com>"="Glenn Hutchings <zondo42@gmail.com>"
 "zondo@penguin"="Glenn Hutchings <zondo42@gmail.com>"
+"g_hutchi"="Glenn Hutchings <zondo42@gmail.com>"
+"convert-repo"="Glenn Hutchings <zondo42@gmail.com>"
